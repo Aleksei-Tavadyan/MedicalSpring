@@ -6,7 +6,7 @@ import com.example.entity.Patient;
 import javax.persistence.EntityManager;
 import java.util.List;
 
-public class PatientController {
+public class PatientController extends AbstractController {
 
     private static PatientController instance = new PatientController();
 
@@ -27,15 +27,5 @@ public class PatientController {
             closeEntityManager(em);
         }
         return null;
-    }
-
-    protected void closeEntityManager(EntityManager em) {
-        try {
-            if (em != null) {
-                em.close();
-            }
-        } catch (Exception ex) {
-            System.out.println(ex);;
-        }
     }
 }
