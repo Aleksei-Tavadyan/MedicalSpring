@@ -16,6 +16,7 @@ public class Application {
         for (int i=0; i<patientList.size();i++)
         {
             System.out.println(patientList.get(i).getpFullName());
+            System.out.println(patientList.get(i).getpFirstName());
         }
     }
 
